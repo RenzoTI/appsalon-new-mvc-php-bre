@@ -21,7 +21,9 @@ class Router
     {
         
         // Proteger Rutas...
-        session_start(); //* ME vota error en nginx
+        if(!isset($_SESSION)) {
+            session_start();
+        }; //* ME vota error en nginx
 
         // Arreglo de rutas protegidas...
         // $rutas_protegidas = ['/admin', '/propiedades/crear', '/propiedades/actualizar', '/propiedades/eliminar', '/vendedores/crear', '/vendedores/actualizar', '/vendedores/eliminar'];
