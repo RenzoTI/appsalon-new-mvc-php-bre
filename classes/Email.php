@@ -38,7 +38,7 @@ class Email {
 
         // Set HTML
         $mail->isHTML(true);
-        //$mail->Charset = 'UTF-8'; 
+        $mail->Charset = 'UTF-8'; 
 
         $contenido = '<html>';
         $contenido .= "<p><strong>Hola " . $this->nombre .  "</p> Has creado tu cuenta en AppSalon, solo debes confirmarla el siguiente enlace</strong>";
